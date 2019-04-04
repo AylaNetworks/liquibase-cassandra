@@ -203,19 +203,33 @@
         </pluginManagement>
     </build>
 
-    <distributionManagement>
-        <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Sonatype Production Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+	<repositories>
+		<repository>
+			<id>deployment</id>
+			<name>Ayla Nexus Snapshots</name>
+			<url>https://nexus.aylanetworks.com:8443/nexus/content/repositories/snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 
-        </repository>
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sontatype Snapshot Repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>deployment</id>
+			<name>Ayla Internal Snapshot Releases</name>
+			<url>https://nexus.aylanetworks.com:8443/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>deployment</id>
+			<name>Ayla Internal Releases</name>
+			<url>https://nexus.aylanetworks.com:8443/nexus/content/repositories/releases/</url>
+		</repository>
+	</distributionManagement>
+         
     <profiles>
         <profile>
             <id>release-sign-artifacts</id>
