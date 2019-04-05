@@ -5,7 +5,7 @@
 
     <groupId>org.liquibase.ext</groupId>
     <artifactId>liquibase-cassandra</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <name>Liquibase Extension: Cassandra Database Support</name>
     <description>Adds support for Cassandra database</description>
@@ -263,7 +263,7 @@
                 <cassandra.version>3.5</cassandra.version>
                 <cassandra-unit.version>3.0.0.1</cassandra-unit.version>
                 <cassandra-driver.version>3.0.0</cassandra-driver.version>
-                <cassandra-jdbc-wrapper.version>3.1.0</cassandra-jdbc-wrapper.version>
+                <cassandra-jdbc-wrapper.version>3.0.3</cassandra-jdbc-wrapper.version>
             </properties>
         </profile>
         <profile>
@@ -275,7 +275,7 @@
                 <cassandra.version>2.2.6</cassandra.version>
                 <cassandra-unit.version>2.2.2.1</cassandra-unit.version>
                 <cassandra-driver.version>2.1.9</cassandra-driver.version>
-                <cassandra-jdbc-wrapper.version>3.1.0</cassandra-jdbc-wrapper.version>
+                <cassandra-jdbc-wrapper.version>3.0.3</cassandra-jdbc-wrapper.version>
             </properties>
         </profile>
     </profiles>
